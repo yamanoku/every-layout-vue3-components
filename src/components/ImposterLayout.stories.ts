@@ -14,7 +14,7 @@ const Template = (args: unknown) => {
         aaa
       </ImposterLayout>
     `,
-  }
+  };
 };
 
 type TemplateType = {

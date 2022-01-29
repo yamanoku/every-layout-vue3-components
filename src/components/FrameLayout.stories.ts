@@ -14,7 +14,7 @@ const Template = (args: unknown) => {
         <img src="https://placehold.jp/640x480.png" alt="">
       </FrameLayout>
     `,
-  }
+  };
 };
 
 type TemplateType = {

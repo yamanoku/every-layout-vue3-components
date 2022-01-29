@@ -17,7 +17,7 @@ const Template = (args: unknown) => {
         <div>ddd</div>
       </SwitcherLayout>
     `,
-  }
+  };
 };
 
 type TemplateType = {

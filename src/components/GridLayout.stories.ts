@@ -25,7 +25,7 @@ const Template = (args: unknown) => {
         <div>aaabbbccc</div>
       </GridLayout>
     `,
-  }
+  };
 };
 
 type TemplateType = {

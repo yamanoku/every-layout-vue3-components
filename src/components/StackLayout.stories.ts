@@ -21,7 +21,7 @@ const Template = (args: unknown) => {
         <div>ddd</div>
       </StackLayout>
     `,
-  }
+  };
 };
 
 type TemplateType = {

@@ -1,11 +1,11 @@
 <template>
-  <div class="box" :class="{invert}">
+  <div class="box" :class="{ invert }">
     <slot />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
+import { defineComponent, computed } from 'vue';
 
 export default defineComponent({
   name: 'BoxLayout',
@@ -28,7 +28,7 @@ export default defineComponent({
       return `${props.borderWidth}px`;
     });
     return { border };
-  }
+  },
 });
 </script>
 

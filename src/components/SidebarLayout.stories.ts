@@ -19,7 +19,7 @@ const Template = (args: unknown) => {
         </template>
       </SidebarLayout>
     `,
-  }
+  };
 };
 
 type TemplateType = {
@@ -35,10 +35,10 @@ type TemplateType = {
 const createStory = () => Template.bind({}) as unknown as TemplateType;
 export const LeftLayout = createStory();
 LeftLayout.args = {
-  side: 'left'
+  side: 'left',
 };
 
 export const RightLayout = createStory();
 RightLayout.args = {
-  side: 'right'
+  side: 'right',
 };

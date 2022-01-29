@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
+import { defineComponent, computed } from 'vue';
 
 export default defineComponent({
   name: 'CoverLayout',
@@ -26,7 +26,7 @@ export default defineComponent({
     noPad: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   setup(props) {
     const tagName = computed(() => {
@@ -34,9 +34,9 @@ export default defineComponent({
     });
     const padding = computed(() => {
       return props.noPad ? 0 : props.space;
-    })
+    });
     return { tagName, padding };
-  }
+  },
 });
 </script>
 

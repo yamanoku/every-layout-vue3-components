@@ -1,11 +1,11 @@
 <template>
-  <div class="center" :class="{andText, intrinsic, gutters: gutters > 0}">
+  <div class="center" :class="{ andText, intrinsic, gutters: gutters > 0 }">
     <slot />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'CenterLayout',
@@ -25,7 +25,7 @@ export default defineComponent({
     intrinsic: {
       type: Boolean,
       default: false,
-    }
+    },
   },
 });
 </script>

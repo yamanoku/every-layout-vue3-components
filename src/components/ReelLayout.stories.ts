@@ -22,7 +22,7 @@ const Template = (args: unknown) => {
         <div>aaa</div>
       </ReelLayout>
     `,
-  }
+  };
 };
 
 type TemplateType = {

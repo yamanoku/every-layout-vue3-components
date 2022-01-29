@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, computed } from "vue";
+import { defineComponent, PropType, computed } from 'vue';
 
 export default defineComponent({
   name: 'SidebarLayout',
@@ -34,14 +34,14 @@ export default defineComponent({
     noStretch: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   setup(props) {
     const sideBarClass = computed(() => {
       return `with-sidebar_${props.side}`;
     });
     return { sideBarClass };
-  }
+  },
 });
 </script>
 

@@ -14,7 +14,7 @@ const Template = (args: unknown) => {
         content
       </CoverLayout>
     `,
-  }
+  };
 };
 
 type TemplateType = {

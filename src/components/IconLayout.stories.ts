@@ -26,7 +26,7 @@ const Template = (args: unknown) => {
         </IconLayout>
       </div>
     `,
-  }
+  };
 };
 
 type TemplateType = {

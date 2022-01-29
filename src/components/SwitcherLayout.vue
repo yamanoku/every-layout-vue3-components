@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'SwitcherLayout',
@@ -17,7 +17,7 @@ export default defineComponent({
     threshold: {
       type: String,
       default: '10px',
-    }
+    },
   },
 });
 </script>
@@ -32,6 +32,6 @@ export default defineComponent({
 .switcher > * {
   --basis: v-bind(threshold);
   flex-grow: 1;
-  flex-basis: calc(( var(--basis) - 100%) * 999);
+  flex-basis: calc((var(--basis) - 100%) * 999);
 }
 </style>

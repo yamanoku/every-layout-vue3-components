@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from "vue";
+import { defineComponent, ref, onMounted } from 'vue';
 
 export default defineComponent({
   name: 'ReelLayout',
@@ -27,26 +27,31 @@ export default defineComponent({
     const reelRoot = ref<HTMLDivElement>();
     onMounted(() => {
       if (reelRoot.value === undefined) return;
-      const reels = Array.from(document.querySelectorAll(`.${reelRoot.value.className}`));
-      const toggleOverflowClass = elem => {
-        elem.classList.toggle('overflowing', elem.scrollWidth > elem.clientWidth);
+      const reels = Array.from(
+        document.querySelectorAll(`.${reelRoot.value.className}`)
+      );
+      const toggleOverflowClass = (elem) => {
+        elem.classList.toggle(
+          'overflowing',
+          elem.scrollWidth > elem.clientWidth
+        );
       };
       for (let reel of reels) {
         if ('ResizeObserver' in window) {
-          new ResizeObserver(entries => {
+          new ResizeObserver((entries) => {
             toggleOverflowClass(entries[0].target);
           }).observe(reel);
         }
 
         if ('MutationObserver' in window) {
-          new MutationObserver(entries => {
+          new MutationObserver((entries) => {
             toggleOverflowClass(entries[0].target);
-          }).observe(reel, {childList: true});
+          }).observe(reel, { childList: true });
         }
       }
     });
     return { reelRoot };
-  }
+  },
 });
 </script>
 
@@ -69,7 +74,13 @@ export default defineComponent({
 
 .reel::-webkit-scrollbar-thumb {
   background-color: #000;
-  background-image: linear-gradient(#000 0, #000 0.25rem, #fff 0.25rem, #fff 0.75rem, #000 0.75rem);
+  background-image: linear-gradient(
+    #000 0,
+    #000 0.25rem,
+    #fff 0.25rem,
+    #fff 0.75rem,
+    #000 0.75rem
+  );
 }
 
 .reel > * {

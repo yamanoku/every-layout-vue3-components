@@ -14,7 +14,7 @@ const Template = (args: unknown) => {
         aaa
       </CenterLayout>
     `,
-  }
+  };
 };
 
 type TemplateType = {

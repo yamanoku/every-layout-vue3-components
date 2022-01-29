@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from "vue";
+import { defineComponent, computed } from 'vue';
 
 export default defineComponent({
   name: 'StackLayout',
@@ -17,14 +17,14 @@ export default defineComponent({
     recursive: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   setup(props) {
     const stackClass = computed(() => {
-      return props.recursive ? 'stack-recursive' : 'stack'
+      return props.recursive ? 'stack-recursive' : 'stack';
     });
     return { stackClass };
-  }
+  },
 });
 </script>
 
