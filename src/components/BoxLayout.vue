@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, computed } from "vue";
 
 export default defineComponent({
   name: 'BoxLayout',
@@ -23,13 +23,19 @@ export default defineComponent({
       default: false,
     },
   },
+  setup(props) {
+    const border = computed(() => {
+      return `${props.borderWidth}px`;
+    });
+    return { border };
+  }
 });
 </script>
 
 <style>
 .box {
   padding: v-bind(padding);
-  border: v-bind(borderWidth) solid;
+  border: v-bind(border) solid;
   --color-light: #fff;
   --color-dark: #000;
   color: var(--color-dark);
