@@ -1,4 +1,4 @@
-# EVERYLAYOUT for Vue3 Component
+# EVERYLAYOUT for Vue3 Components
 
 ```
 ├── BoxLayout
