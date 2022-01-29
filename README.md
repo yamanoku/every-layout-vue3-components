@@ -19,8 +19,7 @@ ref: https://every-layout.dev/
 
 ## Demo
 
-https://every-layout-vue3-component.vercel.app/
-
+https://every-layout-vue3-components.vercel.app/
 
 ## Setup
 
