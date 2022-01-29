@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "format": "prettier -w src/**/*.{ts,vue}"
   },
   "dependencies": {
     "vue": "^3.0.4"
@@ -16,9 +17,16 @@
     "@storybook/vue3": "^6.5.0-alpha.27",
     "@vitejs/plugin-vue": "^1.9.3",
     "@vue/compiler-sfc": "^3.0.4",
+    "@vue/eslint-config-prettier": "7.0.0",
     "babel-loader": "8.2.3",
+    "prettier": "2.5.1",
     "storybook-builder-vite": "0.1.14",
     "vite": "^2.6.4",
     "vue-loader": "16.8.3"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true,
+    "semi": false
   }
 }
