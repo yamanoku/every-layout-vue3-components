@@ -27,6 +27,11 @@ export default defineComponent({
   display: grid;
   grid-gap: v-bind(space);
   --min: v-bind(min);
-  grid-template-columns: repeat(auto-fit, minmax(min(var(--min), 100%), 1fr));
+}
+
+@supports (width: min(var(--min), 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min), 100%), 1fr));
+  }
 }
 </style>
