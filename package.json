@@ -3,13 +3,24 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "vue": "^3.0.4"
   },
   "devDependencies": {
-    "vite": "^1.0.0-rc.13",
-    "@vue/compiler-sfc": "^3.0.4"
+    "@babel/core": "7.16.12",
+    "@storybook/addon-actions": "^6.5.0-alpha.27",
+    "@storybook/addon-essentials": "^6.5.0-alpha.27",
+    "@storybook/addon-links": "^6.5.0-alpha.27",
+    "@storybook/vue3": "^6.5.0-alpha.27",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "@vue/compiler-sfc": "^3.0.4",
+    "babel-loader": "8.2.3",
+    "storybook-builder-vite": "0.1.14",
+    "vite": "^2.6.4",
+    "vue-loader": "16.8.3"
   }
 }
