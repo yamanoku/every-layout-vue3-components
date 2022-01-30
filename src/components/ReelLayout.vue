@@ -27,27 +27,18 @@ export default defineComponent({
     const reelRoot = ref<HTMLDivElement>();
     onMounted(() => {
       if (reelRoot.value === undefined) return;
-      const reels = Array.from(
-        document.querySelectorAll(`.${reelRoot.value.className}`)
-      );
-      const toggleOverflowClass = (elem) => {
+      const reel = document.querySelector(`.${reelRoot.value.className}`);
+      if (reel === null) return;
+      const toggleOverflowClass = (elem: Element) => {
         elem.classList.toggle(
           'overflowing',
           elem.scrollWidth > elem.clientWidth
         );
       };
-      for (let reel of reels) {
-        if ('ResizeObserver' in window) {
-          new ResizeObserver((entries) => {
-            toggleOverflowClass(entries[0].target);
-          }).observe(reel);
-        }
-
-        if ('MutationObserver' in window) {
-          new MutationObserver((entries) => {
-            toggleOverflowClass(entries[0].target);
-          }).observe(reel, { childList: true });
-        }
+      if ('ResizeObserver' in window) {
+        new ResizeObserver((entries) => {
+          toggleOverflowClass(entries[0].target);
+        }).observe(reel);
       }
     });
     return { reelRoot };
